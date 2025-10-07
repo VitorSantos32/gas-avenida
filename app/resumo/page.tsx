@@ -30,7 +30,7 @@ export default function Resumo() {
         Resumo do Pedido
       </motion.h1>
 
-      <div className="bg-gray-900 p-6 rounded-2xl shadow-lg w-full max-w-2xl">
+      <div className="bg-white text-black p-6 rounded-2xl shadow-lg w-full max-w-2xl">
         <p><strong>Cliente:</strong> {dados.nome}</p>
         <p><strong>Telefone:</strong> {dados.telefone}</p>
         <p><strong>Endereço:</strong> {dados.endereco}</p>
