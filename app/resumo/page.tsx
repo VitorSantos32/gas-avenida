@@ -19,10 +19,20 @@ export default function Resumo() {
   }, []);
 
   const finalizar = () => {
-    alert('Pedido realizado com sucesso!');
-    localStorage.clear();
-    router.push('/');
+    fetch('https://script.google.com/macros/s/AKfycbyrMIPB4Gjf1IM22koxw6ob6J4Lj9Mnvi5zx0-32EcFxMnLiAK7EUIaHcdwUT7nFM8V/exec', {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(dados),
+    })
+      .then(() => {
+        alert('Pedido enviado com sucesso!');
+        localStorage.clear();
+        router.push('/');
+      })
+      .catch(() => alert('Erro ao enviar pedido'));
   };
+
 
   return (
     <div className="min-h-screen bg-black text-green-400 flex flex-col items-center p-6">
