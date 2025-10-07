@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fundo fixo com overlay branco 60% */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* sem rolagem */
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url('/fundo.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Garante que o conteúdo fique visível e centralizado */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* Remove qualquer fundo branco de containers, seções e elementos centrais */
+main,
+section,
+div,
+.container,
+.content,
+.page,
+.card,
+form {
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Mantém os textos e botões originais */
+* {
+  color: inherit;
+  box-sizing: border-box;
+}

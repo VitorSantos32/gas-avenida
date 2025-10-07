@@ -1,0 +1,99 @@
+.container {
+  min-height: 100vh;
+  background-color: #000;
+  color: #facc15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.produtoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.produto {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(250, 204, 21, 0.2);
+}
+
+.produtoInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.produtoNome {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.produtoPreco {
+  font-size: 14px;
+  color: #facc15;
+}
+
+.contador {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.botao {
+  background-color: #facc15;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.botao:hover {
+  background-color: #ffde59;
+  transform: scale(1.1);
+}
+
+.total {
+  margin-top: 30px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.botaoPrincipal {
+  background-color: #facc15;
+  color: #000;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 40px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.botaoPrincipal:hover {
+  background-color: #ffe066;
+  transform: scale(1.05);
+}
