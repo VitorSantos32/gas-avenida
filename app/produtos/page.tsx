@@ -8,7 +8,11 @@ export default function Produtos() {
   const router = useRouter();
   const [itens, setItens] = useState<{ nome: string; preco: number; img: string; qtd: number }[]>([
     { nome: 'Botijão de Gás 13kg', preco: 120, img: '/gas.png', qtd: 0 },
+<<<<<<< HEAD
     { nome: 'Água Mineral 20L', preco: 10, img: '/agua.png', qtd: 0 },
+=======
+    { nome: 'Água Mineral 20L', preco: 12, img: '/agua.png', qtd: 0 },
+>>>>>>> 515a96afa8ae72a427431e8d38104c3d1708fc6e
   ]);
 
   const adicionar = (index: number) => {
@@ -36,10 +40,13 @@ export default function Produtos() {
     router.push('/pagamento/tipo');
   };
 
+<<<<<<< HEAD
   const verPedidosRecentes = () => {
     router.push('/pedidos-recentes');
   };
 
+=======
+>>>>>>> 515a96afa8ae72a427431e8d38104c3d1708fc6e
   return (
     <div className="min-h-screen bg-black text-green-400 flex flex-col items-center p-6">
       <motion.h1 initial={{ opacity: 0, y: -30 }} animate={{ opacity: 1, y: 0 }} className="text-3xl font-bold mb-6">
@@ -68,6 +75,7 @@ export default function Produtos() {
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="mt-6 text-center">
         <h3 className="text-2xl font-bold mb-3">Total: R$ {total.toFixed(2)}</h3>
+<<<<<<< HEAD
         <div className="flex flex-col gap-3">
           <motion.button
             whileHover={{ scale: 1.05, backgroundColor: '#7bf84aff' }}
@@ -86,6 +94,16 @@ export default function Produtos() {
              Pedidos Recentes
           </motion.button>
         </div>
+=======
+        <motion.button
+          whileHover={{ scale: 1.05, backgroundColor: '#7bf84aff' }}
+          whileTap={{ scale: 0.95 }}
+          onClick={continuar}
+          className="bg-green-400 text-black font-bold p-3 rounded-lg"
+        >
+          Continuar
+        </motion.button>
+>>>>>>> 515a96afa8ae72a427431e8d38104c3d1708fc6e
       </motion.div>
     </div>
   );
