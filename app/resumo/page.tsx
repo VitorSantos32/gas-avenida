@@ -2,10 +2,7 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import { enviarPedido } from '../../utils/googleSheets';
-=======
->>>>>>> 515a96afa8ae72a427431e8d38104c3d1708fc6e
 
 export default function Resumo() {
   const router = useRouter();
@@ -22,10 +19,8 @@ export default function Resumo() {
     setDados({ nome, telefone, itens, total, endereco, tipo, forma });
   }, []);
 
-<<<<<<< HEAD
   const finalizar = async () => {
     try {
-      // Enviar pedido com status "PEDIDO PROCESSANDO"
       const sucesso = await enviarPedido({
         nome: dados.nome,
         telefone: dados.telefone,
@@ -34,7 +29,7 @@ export default function Resumo() {
         total: dados.total,
         tipo: dados.tipo,
         forma: dados.forma,
-        status: 'PEDIDO PROCESSANDO'
+        status: 'PEDIDO PROCESSANDO',
       });
 
       if (sucesso) {
@@ -48,27 +43,15 @@ export default function Resumo() {
       console.error('Erro ao finalizar pedido:', error);
       alert('Erro ao enviar pedido. Tente novamente.');
     }
-=======
-  const finalizar = () => {
-    fetch('https://script.google.com/macros/s/AKfycbyrMIPB4Gjf1IM22koxw6ob6J4Lj9Mnvi5zx0-32EcFxMnLiAK7EUIaHcdwUT7nFM8V/exec', {
-      method: 'POST',
-      mode: 'no-cors',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(dados),
-    })
-      .then(() => {
-        alert('Pedido enviado com sucesso!');
-        localStorage.clear();
-        router.push('/');
-      })
-      .catch(() => alert('Erro ao enviar pedido'));
->>>>>>> 515a96afa8ae72a427431e8d38104c3d1708fc6e
   };
-
 
   return (
     <div className="min-h-screen bg-black text-green-400 flex flex-col items-center p-6">
-      <motion.h1 initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-3xl font-bold mb-6">
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="text-3xl font-bold mb-6"
+      >
         Resumo do Pedido
       </motion.h1>
 
@@ -76,10 +59,7 @@ export default function Resumo() {
         <p><strong>Cliente:</strong> {dados.nome}</p>
         <p><strong>Telefone:</strong> {dados.telefone}</p>
         <p><strong>Endereço:</strong> {dados.endereco}</p>
-<<<<<<< HEAD
         <p><strong>Status:</strong> <span className="text-yellow-400 font-semibold">PEDIDO PROCESSANDO</span></p>
-=======
->>>>>>> 515a96afa8ae72a427431e8d38104c3d1708fc6e
         <p><strong>Tipo de Pagamento:</strong> {dados.tipo === 'entrega' ? 'Na Entrega' : 'Antecipado'}</p>
         <p><strong>Forma de Pagamento:</strong> {dados.forma}</p>
 
